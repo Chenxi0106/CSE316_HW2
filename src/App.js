@@ -306,7 +306,7 @@ class App extends React.Component {
         let modal = document.getElementById("delete-list-modal");
         modal.classList.remove("is-visible");
     }
-    /*comment for uses
+    
     //own code
     //change to the editing mode
     LoadEditPlayListModal=(id)=>{
@@ -365,7 +365,7 @@ class App extends React.Component {
         
        
     }
-
+    /*comment for uses
     //own code
     //add song
     prepareToAddSong=()=>{
@@ -529,6 +529,12 @@ class App extends React.Component {
                     hideDeleteListModalCallback={this.hideDeleteListModal}
                     deleteListCallback={this.deleteMarkedList}
                 />
+                 <EditPlayListModal 
+                cancelModal={this.cancelEditPlayListModal}
+                confirmModal={this.confirmEditPlayListModal}
+                id={this.state.editedId}
+                currentList={this.state.currentList}
+                />
 
               
                 
@@ -542,12 +548,7 @@ class App extends React.Component {
 
 export default App;
 /*
-  <EditPlayListModal 
-                cancelModal={this.cancelEditPlayListModal}
-                confirmModal={this.confirmEditPlayListModal}
-                id={this.state.editedId}
-                currentList={this.state.currentList}
-                />
+ 
                 <DeleteCardModal
                 currentList={this.state.currentList}
                 id={this.state.deleteId}
