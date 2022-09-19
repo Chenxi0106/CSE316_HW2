@@ -365,7 +365,7 @@ class App extends React.Component {
         
        
     }
-    /*comment for uses
+
     //own code
     //add song
     prepareToAddSong=()=>{
@@ -386,7 +386,6 @@ class App extends React.Component {
        
         
     }
-       */
     
 
     //own code
