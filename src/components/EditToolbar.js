@@ -10,10 +10,10 @@ export default class EditToolbar extends React.Component {
         let redoClass = "toolbar-button";
         let closeClass = "toolbar-button";
         //add ! at the following with - to eliminate space
-        if (!canAddSong) addSongClass += "-disabled";
-        if (!canUndo||!canAddSong) undoClass += "-disabled";
-        if (!canRedo||!canAddSong) redoClass += "-disabled";
-        if (!canClose) closeClass += "-disabled";
+        //if (!canAddSong) addSongClass += "-disabled";
+        //if (!canUndo||!canAddSong) undoClass += "-disabled";
+        //if (!canRedo||!canAddSong) redoClass += "-disabled";
+        //if (!canClose) closeClass += "-disabled";
         return (
             <div id="edit-toolbar">
             <input 
