@@ -343,6 +343,7 @@ class App extends React.Component {
             sessionData:prevState.sessionData,
             editedId:null
         }),()=>{
+            //save list
             this.cancelEditPlayListModal();
             this.db.mutationUpdateList(this.state.currentList);
         });
@@ -381,6 +382,7 @@ class App extends React.Component {
         this.setState(()=>({
             currentList:newCurrentList
         }),()=>{
+            //save list
             this.db.mutationUpdateList(this.state.currentList);
         });
        
@@ -423,6 +425,7 @@ class App extends React.Component {
             deleteId:null
             
         }),()=>{
+            //save list
             this.db.mutationUpdateList(this.state.currentList);
         });
 
@@ -443,7 +446,7 @@ class App extends React.Component {
             this.hideDeleteSongModal();
         });
     }
-    /*
+
 
     //insert a song
     //own code
@@ -456,7 +459,6 @@ class App extends React.Component {
             this.db.mutationUpdateList(this.state.currentList);
         });
     }
-    
     //handle event
     //key down
     //own code
@@ -474,8 +476,6 @@ class App extends React.Component {
         );
     }
 
-    */
- 
    
     
     
@@ -486,13 +486,12 @@ class App extends React.Component {
         let canUndo = this.tps.hasTransactionToUndo();
         let canRedo = this.tps.hasTransactionToRedo();
         let canClose = this.state.currentList !== null;
-        //comment for it
-        /*
+
+        //own code
         if(!this.isBind){
             this.useEvent();
             this.isBind=true;
         }
-        */
         
         
         
