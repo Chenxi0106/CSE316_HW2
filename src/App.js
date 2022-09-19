@@ -343,7 +343,7 @@ class App extends React.Component {
             sessionData:prevState.sessionData,
             editedId:null
         }),()=>{
-            //save list
+            
             this.cancelEditPlayListModal();
             this.db.mutationUpdateList(this.state.currentList);
         });
@@ -382,7 +382,7 @@ class App extends React.Component {
         this.setState(()=>({
             currentList:newCurrentList
         }),()=>{
-            //save list
+           
             this.db.mutationUpdateList(this.state.currentList);
         });
        
@@ -425,7 +425,6 @@ class App extends React.Component {
             deleteId:null
             
         }),()=>{
-            //save list
             this.db.mutationUpdateList(this.state.currentList);
         });
 
