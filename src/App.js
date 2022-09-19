@@ -386,6 +386,7 @@ class App extends React.Component {
        
         
     }
+       */
     
 
     //own code
@@ -443,6 +444,7 @@ class App extends React.Component {
             this.hideDeleteSongModal();
         });
     }
+    /*
 
     //insert a song
     //own code
@@ -472,7 +474,9 @@ class App extends React.Component {
         }
         );
     }
+
     */
+ 
    
     
     
@@ -535,6 +539,12 @@ class App extends React.Component {
                 id={this.state.editedId}
                 currentList={this.state.currentList}
                 />
+                <DeleteCardModal
+                currentList={this.state.currentList}
+                id={this.state.deleteId}
+                confirmDeleteCardCallback={this.confirmDeleteSongModal}
+                cancelDeleteCardCallback={this.cancelDeleteSongModal}
+                />
 
               
                 
@@ -549,10 +559,5 @@ class App extends React.Component {
 export default App;
 /*
  
-                <DeleteCardModal
-                currentList={this.state.currentList}
-                id={this.state.deleteId}
-                confirmDeleteCardCallback={this.confirmDeleteSongModal}
-                cancelDeleteCardCallback={this.cancelDeleteSongModal}
-                />
+                
 */
