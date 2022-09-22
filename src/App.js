@@ -195,6 +195,9 @@ class App extends React.Component {
     // THIS FUNCTION BEGINS THE PROCESS OF LOADING A LIST FOR EDITING
     loadList = (key) => {
         let newCurrentList = this.db.queryGetList(key);
+        //own edit code
+        //make sure that transaction is clear before list is loaded
+        this.tps.clearAllTransactions();
         this.setState(prevState => ({
             listKeyPairMarkedForDeletion : prevState.listKeyPairMarkedForDeletion,
             currentList: newCurrentList,
@@ -205,7 +208,6 @@ class App extends React.Component {
         }), () => {
             // AN AFTER EFFECT IS THAT WE NEED TO MAKE SURE
             // THE TRANSACTION STACK IS CLEARED
-            this.tps.clearAllTransactions();
         });
         
     }
@@ -485,14 +487,11 @@ class App extends React.Component {
         let canUndo = this.tps.hasTransactionToUndo();
         let canRedo = this.tps.hasTransactionToRedo();
         let canClose = this.state.currentList !== null;
-
         //own code
         if(!this.isBind){
             this.useEvent();
             this.isBind=true;
         }
-        
-        
         
         return (
             <div id="root">
@@ -554,7 +553,3 @@ class App extends React.Component {
 
 
 export default App;
-/*
- 
-                
-*/
